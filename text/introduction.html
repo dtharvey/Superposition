@@ -11,7 +11,7 @@
 
 
 
-<title>superposition.knit</title>
+<title>introduction.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -352,49 +352,51 @@ display: none;
 </div>
 
 
-<p>A sine wave has the form <span class="math inline">\(y(x) = A
-\sin({ax} + \phi)\)</span>, where <em>y(x)</em> is the amplitude as a
-function of position, <em>x</em>, along the <em>x</em>-axis, <em>A</em>
-is the maximum amplitude, <em>a</em> is the periodicity, and <span class="math inline">\(\phi\)</span> is a phase angle that shifts the
-sine wave’s position along the <em>x</em>-axis. Note that the units of
-the <em>x</em>-axis are multiples of <span class="math inline">\(\pi\)</span>.</p>
+<!-- The following script makes it possible to use the mhchem -->
+<!-- latex package in a .Rmd file and to knit it into an .html file -->
+<!-- the font size is scaled to 90% to match text -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[Contrib]/mhchem/mhchem.js"]
+}
+});
+MathJax.Hub.Config({ 
+        "HTML-CSS": { scale: 90 }, 
+        SVG: { linebreaks: { automatic:true } }, 
+ });
+</script>
+<!-- text for introduction -->
+<p>A sine wave has the mathematical form <span class="math inline">\(y(x) = A \sin({ax} + \phi)\)</span>, where <span class="math inline">\(y(x)\)</span> is the sine wave’s amplitude as a
+function of its position, <em>x</em>, along the <em>x</em>-axis in units
+of <span class="math inline">\(\pi\)</span>, and where <em>A</em> is the
+sine wave’s maximum amplitude, <em>a</em> is its periodicity (or
+frequency), and <span class="math inline">\(\phi\)</span> is a phase
+angle that shifts the sine wave’s position along the
+<em>x</em>-axis.</p>
 <div id="what-is-the-superposition-of-waves" class="section level4">
 <h4>What is the Superposition of Waves?</h4>
 <p>When two (or more) waves travel along the same axis, the result is a
 single wave that is the sum of the individual waves. This is the
-principle of superposition. Use the pop-up menu to select the sine wave.
-With the slider set to 0, the figure shows the sine wave <span class="math inline">\(y(x) = \sin(x)\)</span>. Adjusting the slider adds
-a second, phase-shifted sine wave where <span class="math inline">\(\phi
-= \frac{2\pi k}{10})\)</span>, and where <em>k</em> is an integer
-increment in the phase angle. Note that when <span class="math inline">\(n = 5\)</span> and <span class="math inline">\(\phi = \pi\)</span> the two sine waves are
-out-of-phase and their sum is zero for all values of <em>x</em>.</p>
-</div>
-<div id="why-is-the-principle-of-superposition-important" class="section level4">
-<h4>Why is the Principle of Superposition Important?</h4>
-<p>One consequence of the principle of superposition is that we can
-generate interesting repeating waves by adding together a series of sine
-waves. You can explore this for three different types of waves—square,
-triangle, and sawtooth—using the controls on the right. Setting the
-slider to 0 shows the target wave form. Adjusting the slider for the
-number of sine waves shows that including more sine waves better
-approximates the desired wave form. The equation that describes this
-summation appears below each figure. There are three things to note
-about the properties of the individual waves:</p>
+principle of superposition, which we illustrate using the figure on the
+right. Each row shows two individual sine waves, identified as <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span>, and their sum, <span class="math inline">\(y_3\)</span>, where <span class="math inline">\(y_3 = y_1 + y_2\)</span>.</p>
 <ul>
-<li>The amplitudes of individual waves are given by the term outside the
-summation and the first term inside the summation; the periodicity is
-included within the sine function.</li>
-<li>The sine waves that make up the triangle wave and the sawtooth wave
-switch between positive and negative amplitudes because of the term
-<span class="math inline">\((-1)^{k}\)</span>; for the square wave, all
-amplitudes are positive.</li>
-<li>The sine waves that make up the square wave and the triangle wave
-include odd positive integers only because of the term <span class="math inline">\((2k-1)\)</span>; for the sawtooth wave, the
-periodicities are all positive integers.</li>
+<li><p>In the first row, the sine waves <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span> are identical and equal to <span class="math inline">\(\sin(x)\)</span>. Adding together these two waves
+gives a new sine wave, <span class="math inline">\(y_3\)</span>, that
+has the same periodicity, but an amplitude that is twice that of <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span>.</p></li>
+<li><p>In the second row, the sine wave <span class="math inline">\(y_2\)</span> is shifted by a phase angle of <span class="math inline">\(\pi\)</span> relative to sine wave <span class="math inline">\(y_1\)</span>. This places the two sine waves in
+direct opposition to each other, such that for every value of <span class="math inline">\(x\)</span>, the amplitude of <span class="math inline">\(y_1\)</span> is equal in magnitude but opposite in
+sign to the amplitude of <span class="math inline">\(y_2\)</span>; as a
+result, the sum of <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span> gives a new wave, <span class="math inline">\(y_3\)</span>, with an amplitude of 0 for all
+values of <span class="math inline">\(x\)</span>.</p></li>
+<li><p>In the third row, the periodicity of the sine wave <span class="math inline">\(y_2\)</span> is twice that of the sine wave <span class="math inline">\(y_1\)</span>, which doubles the number of
+oscillations. The sum of <span class="math inline">\(y_1\)</span> and
+<span class="math inline">\(y_2\)</span> gives a new wave, <span class="math inline">\(y_3\)</span>, that exhibits a more complex
+repeating pattern.</p></li>
 </ul>
-<p>The ability to write an equation for a wave in terms of sine
-functions is interesting and a topic we will return to in the module on
-the Fourier transform.</p>
+<p>The example in the last row is particularly interesting as it
+suggests that we can build a library of repeating patterns by adding
+together an appropriate set of sine waves.</p>
 </div>
 
 

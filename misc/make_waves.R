@@ -3,8 +3,8 @@
 # code to generate set of 15 sine waves to make square wave
 # saving file as squarewave.csv
 
-x = seq(0,4*pi,0.01*pi)
-y = seq(1,29,2)
+x = seq(0,4*pi,0.01*pi) # values along x axis
+y = seq(1,29,2) # equivalent to 2k-1
 y_square = matrix(data = NA, nrow = 401, ncol = 15)
 for (i in 1:15){
   y_square[,i] = (4/pi) * (sin(y[i] * x)/y[i])
@@ -28,7 +28,7 @@ write.csv(y_square, file = "squarewave.csv",row.names = FALSE)
 #   lines(x = x, y = squarewave[,i], lty = 2, col = 1)
 # }
 
-# code to generate set of 15 sine waves to make square wave
+# code to generate set of 15 sine waves to make triangular wave
 # saving file as trianglewave.csv
 
 x = seq(0,4*pi,0.01*pi)
