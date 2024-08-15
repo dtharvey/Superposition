@@ -14,6 +14,7 @@ ui = navbarPage("AC 3.0: Superposition of Waves",
           # introduction tabPanel
           tabPanel("Introduction",
                    fluidRow(
+                     withMathJax(),
                      column(width = 6,
                             wellPanel(
                               includeHTML("text/introduction.html")
@@ -63,12 +64,12 @@ ui = navbarPage("AC 3.0: Superposition of Waves",
                                               "triangle wave",
                                               "sawtooth wave"),
                                   selectize = FALSE, width = "150px"),
-                      sliderInput("n1","number of sine waves used",
+                      sliderInput("n1","number of sine waves",
                                   min = 0, max = 15, value = 0,
-                                  width = "300px", step = 1, ticks = FALSE),
+                                  step = 1, ticks = FALSE),
                       radioButtons("waves","show individual sine waves?",
                                    choices = c("yes","no"), selected = "no",
-                                   inline = TRUE, width = "150px")
+                                   inline = TRUE)
           ),
                     plotOutput("complexwaves", height = "550px"),
                     uiOutput("waveequation")

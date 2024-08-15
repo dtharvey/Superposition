@@ -5,9 +5,7 @@ account: dthdpu
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7816734
-bundleId: 7535159
+bundleId: 8987936
 url: https://dthdpu.shinyapps.io/Superposition/
-when: 1691257722.64155
-lastSyncTime: 1691257722.64156
 asMultiple: FALSE
 asStatic: FALSE

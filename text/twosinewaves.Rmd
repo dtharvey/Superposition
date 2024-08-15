@@ -1,34 +1,34 @@
 ---
-output: html_document
+output: html_fragment
 ---
 
 <!-- The following script makes it possible to use the mhchem -->
 <!-- latex package in a .Rmd file and to knit it into an .html file -->
 <!-- the font size is scaled to 90% to match text -->
 
-```{=html}
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: {
-    extensions: ["[Contrib]/mhchem/mhchem.js"]
-}
-});
-MathJax.Hub.Config({ 
-        "HTML-CSS": { scale: 90 }, 
-        SVG: { linebreaks: { automatic:true } }, 
- });
-</script>
-```
+<!-- ```{=html} -->
+<!-- <script type="text/x-mathjax-config"> -->
+<!-- MathJax.Hub.Config({ -->
+<!--   TeX: { -->
+<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
+<!-- } -->
+<!-- }); -->
+<!-- MathJax.Hub.Config({  -->
+<!--         "HTML-CSS": { scale: 90 },  -->
+<!--         SVG: { linebreaks: { automatic:true } },  -->
+<!--  }); -->
+<!-- </script> -->
+<!-- ``` -->
 
 <!-- text for two sine waves -->
 
-The figure on the right demonstrates the superposition of two sine waves to form a new wave. The sine waves $y_1$ and $y_2$ are define by the equation $y(x) = A \sin(ax + n \pi)$, where $n \pi$ gives the phase angle in units of $\pi$. For $y_1$, the amplitude is fixed to 1, the periodicity is fixed to 1, and the phase angle is fixed to $n \pi = 0$; thus, $y_1 = sin(x)$. The three sliders allow you to change the amplitude, the periodicity, and the phase angle for $y_2$. When the radio button is set to display the sum of $y_1$ and $y_2$, their sum appears as $y_3$.
+The figure on the right demonstrates the superposition of two sine waves, $y_1$ and $y_2$, to form a new wave, $y_3$. The sine waves $y_1$ and $y_2$ are define by the equation $y(x) = A \sin(ax + n \pi)$, where $n \pi$ gives the phase angle in units of $\pi$. For $y_1$, the amplitude is fixed to 1, the periodicity is fixed to 1, and the phase angle is fixed to $n \pi = 0$; thus, $y_1 = \sin(x)$. The three sliders allow you to change the amplitude, the periodicity, and the phase angle for $y_2$. When the radio button is set to display the sum of $y_1$ and $y_2$, their sum appears as $y_3$.
 
 **Exercise 1.** Adjust the values of $A$, $a$, and $n \pi$ for $y_2$ and explain how each variable affects the shape of the sine wave $y_2$. For clarity, do not display $y_3$.
 
 **Exercise 2.** Reset the values for $y_2$ to an amplitude of 2, a periodicity of 2, and a phase angle of $0.50 \pi$. Examine the shapes of $y_1$ and $y_2$ and predict the shape of $y_3$. Use the radio button to display $y_3$ and evaluate your work.
 
-**Exercise 3.** The figure below shows $y_3$, the superposition of $y_1 = \sin(x)$ with $y_2 = A\sin(ax + n\pi)$. Drawing on your understanding of how $A$, $a$, and $n \pi$ affect a sine wave's shape, determine values of $A$, $a$, and $n\pi$ for $y_2$ that will reproduce $y_3$. Test your prediction and make adjustments to $A$, $a$, and $n \pi$ as needed.
+**Exercise 3.** The figure below shows $y_3$, the superposition of $y_1 = \sin(x)$ with $y_2 = A\sin(ax + n\pi)$. Drawing on your understanding of how $A$, $a$, and $n \pi$ affect a sine wave's shape, predict the values of $A$, $a$, and $n\pi$ for $y_2$ that will reproduce $y_3$. Test your prediction and make adjustments to $A$, $a$, and $n \pi$ as needed.
 
 ```{r, echo=FALSE, fig.height=3}
 palette("Okabe-Ito")

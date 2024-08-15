@@ -27,17 +27,17 @@ shinyServer(function(input,output,session){
   
   observe({
     wavebutton = input$wavetype
-    if (wavebutton == "sine wave"){
-      updateRadioButtons(session, "waves", selected = "yes")
-      updateSliderInput(session, "n1", 
-                        value = 0,
-                        label = "increment of phase angle")
-    }
+    # if (wavebutton == "sine wave"){
+    #   updateRadioButtons(session, "waves", selected = "yes")
+    #   updateSliderInput(session, "n1", 
+    #                     value = 0,
+    #                     label = "increment of phase angle")
+    # }
     if (wavebutton != "sine wave"){
       updateRadioButtons(session, "waves", selected = "no")
       updateSliderInput(session, "n1",
                         value = 0,
-                        label = "number of sine waves to add")
+                        label = "number of sine waves")
     }
   })
   
