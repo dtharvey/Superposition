@@ -1,30 +1,14 @@
 
 
 
-<!-- The following script makes it possible to use the mhchem -->
-<!-- latex package in a .Rmd file and to knit it into an .html file -->
-<!-- the font size is scaled to 90% to match text -->
-<!-- ```{=html} -->
-<!-- <script type="text/x-mathjax-config"> -->
-<!-- MathJax.Hub.Config({ -->
-<!--   TeX: { -->
-<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
-<!-- } -->
-<!-- }); -->
-<!-- MathJax.Hub.Config({  -->
-<!--         "HTML-CSS": { scale: 90 },  -->
-<!--         SVG: { linebreaks: { automatic:true } },  -->
-<!--  }); -->
-<!-- </script> -->
-<!-- ``` -->
-<!-- text for introduction -->
-<p>A sine wave has the mathematical form <span class="math inline">\(y(x) = A \sin({ax} + \phi)\)</span>, where <span class="math inline">\(y(x)\)</span> is the sine wave’s amplitude as a
-function of its position, <em>x</em>, along the <em>x</em>-axis in units
-of <span class="math inline">\(\pi\)</span>, where <em>A</em> is the
-sine wave’s maximum amplitude, where <em>a</em> is its periodicity (or
-frequency), and where <span class="math inline">\(\phi\)</span> is a
-phase angle that shifts the sine wave’s position along the
-<em>x</em>-axis.</p>
+<p><span class="math inline">\(\require{mhchem}\)</span>A sine wave has
+the mathematical form <span class="math inline">\(y(x) = A \sin({ax} +
+\phi)\)</span>, where <span class="math inline">\(y(x)\)</span> is the
+sine wave’s amplitude as a function of its position, <em>x</em>, along
+the <em>x</em>-axis in units of <span class="math inline">\(\pi\)</span>, where <em>A</em> is the sine wave’s
+maximum amplitude, where <em>a</em> is its periodicity (or frequency),
+and where <span class="math inline">\(\phi\)</span> is a phase angle
+that shifts the sine wave’s position along the <em>x</em>-axis.</p>
 <div id="what-is-the-superposition-of-waves" class="section level4">
 <h4>What is the Superposition of Waves?</h4>
 <p>When two (or more) waves travel in the same direction along the same
@@ -40,15 +24,15 @@ has the same periodicity, but an amplitude that is twice that of <span class="ma
 <span class="math inline">\(y_1\)</span>. This places the two waves in
 direct opposition to each other, such that for every value of <span class="math inline">\(x\)</span>, the amplitude of <span class="math inline">\(y_1\)</span> is equal in magnitude but opposite in
 sign to the amplitude of <span class="math inline">\(y_2\)</span>; as a
-result, the sum of <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span>, <span class="math inline">\(y_3\)</span>, has an amplitude of 0 for all values
-of <span class="math inline">\(x\)</span>.</p></li>
-<li><p>In the third row, the periodicity of one sine wave, <span class="math inline">\(y_2\)</span>, is twice that of the other sine
+result, their sum, <span class="math inline">\(y_3\)</span>, has an
+amplitude of 0 for all values of <span class="math inline">\(x\)</span>.</p></li>
+<li><p>In the third row, the periodicity of the second sine wave, <span class="math inline">\(y_2\)</span>, is twice that of the first sine
 wave, <span class="math inline">\(y_1\)</span>, which doubles the number
 of oscillations. The sum of <span class="math inline">\(y_1\)</span> and
 <span class="math inline">\(y_2\)</span> gives a new wave, <span class="math inline">\(y_3\)</span>, that exhibits a more complex
 repeating pattern.</p></li>
 </ul>
 <p>The example in the last row is particularly interesting as it
-suggests that we can build a library of repeating patterns by adding
-together an appropriate set of sine waves.</p>
+suggests we can build a library of repeating patterns by adding together
+an appropriate set of sine waves.</p>
 </div>

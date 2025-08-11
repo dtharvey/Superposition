@@ -1,23 +1,6 @@
 
 
 
-<!-- The following script makes it possible to use the mhchem -->
-<!-- latex package in a .Rmd file and to knit it into an .html file -->
-<!-- the font size is scaled to 90% to match text -->
-<!-- ```{=html} -->
-<!-- <script type="text/x-mathjax-config"> -->
-<!-- MathJax.Hub.Config({ -->
-<!--   TeX: { -->
-<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
-<!-- } -->
-<!-- }); -->
-<!-- MathJax.Hub.Config({  -->
-<!--         "HTML-CSS": { scale: 90 },  -->
-<!--         SVG: { linebreaks: { automatic:true } },  -->
-<!--  }); -->
-<!-- </script> -->
-<!-- ``` -->
-<!-- text for complex waves -->
 <p>When we add together two sine waves their sum is a periodic wave that
 retains the smooth shape of a sine wave. If we add together three or
 more sine waves we can generate more angular periodic waveforms—such as
@@ -32,23 +15,22 @@ triangular wave and the sawtooth wave.</p>
 <p><strong>Exercise 2.</strong> We can approximate each of these
 periodic waveforms by adding together a series of simple sine waves.
 Select the square wave and use the slider to explore how the quality of
-the approximation depends on the number of sine waves used. Are there
+the approximation depends on the number of sine waves you use. Are there
 features of the square wave that are easy to reproduce accurately and
 are there features of the square wave that are difficult to reproduce
 accurately? Repeat for the triangular wave and the sawtooth wave. For
 clarity, do not display the individual sine waves.</p>
 <p><strong>Exercise 3.</strong> Return to the square wave and note that
-there is an equation shown below the figure that shows the summation of
-<span class="math inline">\(k\)</span> individual sine waves, where
-<span class="math inline">\(k\)</span> varies from 1 to <span class="math inline">\(\infty\)</span>. This summation is called a
+there is an equation below the figure that shows the summation of <span class="math inline">\(k\)</span> individual sine waves, where <span class="math inline">\(k\)</span> is an integer that varies from 1 to
+<span class="math inline">\(\infty\)</span>. This summation is called a
 Fourier series. The amplitude of each sine wave in this series is the
-product of two terms: the term <span class="math inline">\(\frac{4}{\pi}\)</span> that sits outside of the
-summation, and the term <span class="math inline">\(\frac{1}{2k-1}\)</span> that sits within the
+product of two terms: a term of <span class="math inline">\(\frac{4}{\pi}\)</span> that sits outside of the
+summation, and a term of <span class="math inline">\(\frac{1}{2k-1}\)</span> that sits within the
 summation. The periodicity of each sine wave is given by the term <span class="math inline">\((2k-1)\)</span> included within the <span class="math inline">\(\sin()\)</span> function. There is no term for
 adjusting the phase angle of individual sine waves. Click on the radio
 button to show the individual sine waves and then use the slider to
-examine, in turn, the first three sine waves <em>k</em> = 1, 2, and 3 in
-the Fourier series. Explain how the difference in the amplitudes and the
-periodicities of the first three sine waves are consistent with the
+examine, in turn, the first three sine waves (<em>k</em> = 1, 2, and 3)
+in the Fourier series. Explain how the difference in the amplitudes and
+the periodicities of the first three sine waves are consistent with the
 equation for a square wave. Repeat for the triangular wave and the
 sawtooth wave.</p>

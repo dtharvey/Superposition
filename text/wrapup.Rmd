@@ -2,31 +2,11 @@
 output: html_fragment
 ---
 
-<!-- The following script makes it possible to use the mhchem -->
-<!-- latex package in a .Rmd file and to knit it into an .html file -->
-<!-- the font size is scaled to 90% to match text -->
-
-<!-- ```{=html} -->
-<!-- <script type="text/x-mathjax-config"> -->
-<!-- MathJax.Hub.Config({ -->
-<!--   TeX: { -->
-<!--     extensions: ["[Contrib]/mhchem/mhchem.js"] -->
-<!-- } -->
-<!-- }); -->
-<!-- MathJax.Hub.Config({  -->
-<!--         "HTML-CSS": { scale: 90 },  -->
-<!--         SVG: { linebreaks: { automatic:true } },  -->
-<!--  }); -->
-<!-- </script> -->
-<!-- ``` -->
-
-<!-- text for wrapping up -->
-
 #### Visuallizing a Fourier Series
 
 In this module we used two ways to display the Fourier series for a square wave, a triangular wave, and a sawtooth wave: an overlay of the individual sine waves in the Fourier series, and an equation that describes the Fourier series. Both have limitations. Overlaying individual sine waves results in a cluttered plot in which it is difficult to discern between most sine waves beyond the first three. The equation for a Fourier series explains how the amplitude and the periodicity change from wave-to-wave---for a square wave, each successive sine wave has an amplitude that decreases by a factor of $(2k - 1)$ and a periodicity that increases by a factor of $(2k - 1)$---but not in way that is easy to visualize.
 
-The plot on the right provides a more useful way to visualize the Fourier series for a square wave. Each vertical line gives the amplitude, $A$, and the periodicity, $a$, for one of the first 15 terms in the square wave's Fourier series, with the first member of the series, $k = 1$, on the far left. The position of the vertical lines along the *x*-axis clearly shows that only sine waves with an odd value of $a$ contribute to the square wave's Fourier series. Values of the amplitude are displayed above each vertical line.
+The plot on the right is a more useful way to visualize the Fourier series for a square wave. Each vertical line gives the amplitude, $A$, and the periodicity, $a$, for one of the first 15 terms in the square wave's Fourier series, with the first member of the series, $k = 1$, on the far left. The position of the vertical lines along the *x*-axis clearly shows that only sine waves with an odd value of $a$ contribute to the square wave's Fourier series.The amplitude of each sine wave in the Fourier series is displayed above its vertical line.
 
 #### Data Sets Used in This Module
 
@@ -40,7 +20,7 @@ Our treatment of the superposition of waves did not consider the source of these
 
 For a brief discussion of the superposition of electromagnetic waves, see [Chapter 6.2 of Instrumental Analysis](https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Instrumental_Analysis_(LibreTexts)/06%3A_An_Introduction_to_Spectrophotometric_Methods/6.02%3A_Wave_Properties_of_Electromagnetic_Radiation), which is available through the [LibreText](https://libretexts.org/) project.
 
-For a discussion of the superposition of sound waves, including the ability to listen to the result of the superposition, see [Wave Interference and Beat Frequency](https://academo.org/demos/wave-interference-beat-frequency/) and [Let's Learn About Waveforms](https://pudding.cool/2018/02/waveforms/).
+For a discussion of the superposition of sound waves, including the ability to listen to the result of a superposition, see [Wave Interference and Beat Frequency](https://academo.org/demos/wave-interference-beat-frequency/) and [Let's Learn About Waveforms](https://pudding.cool/2018/02/waveforms/).
 
 The website [Isaac Physics](https://isaacphysics.org/) provides a good [introduction](https://isaacphysics.org/concepts/cp_superposition?stage=all) to the superposition of waves. Another [useful website](https://www.acs.psu.edu/drussell/demos/superposition/superposition.html) approaches superposition in terms of acoustics.
 

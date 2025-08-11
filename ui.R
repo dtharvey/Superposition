@@ -1,7 +1,4 @@
 # ui for principle of superposition
-library(shiny)
-library(shinythemes)
-
 
 ui = navbarPage("AC 3.0: Superposition of Waves",
                 theme = shinytheme("journal"),
@@ -17,44 +14,55 @@ ui = navbarPage("AC 3.0: Superposition of Waves",
                      withMathJax(),
                      column(width = 6,
                             wellPanel(
+                              class = "scrollable-well",
+                              div(
+                                class = "html-fragment",
                               includeHTML("text/introduction.html")
-                            )),
+                            ))),
                      column(width = 6,
-                            plotOutput("introplot", height = "700px"))
+                            plotOutput("introplot", height = "600px"))
                    )),
           
               tabPanel("Superposition of Two Sine Waves",
                 fluidRow(
                   column(width = 6,
                          wellPanel(
-                           includeHTML("text/twosinewaves.html")
-                         )),
+                           class = "scrollable-well",
+                           div(
+                             class = "html-fragment",
+                           includeHTML("text/activity1.html")
+                         ))),
                   column(width = 6,
                          align = "center",
                     splitLayout(
                       sliderInput("A", "Amplitude (A) for y2",
                                   min = -2, max = 2, value = 2,
-                                  step = 0.25, width = "175px", ticks = FALSE),
+                                  step = 0.25, width = "175px", 
+                                  ticks = FALSE),
                       sliderInput("a", "periodicity (a) for y2",
                                   min = 1, max = 5, value = 2,
-                                  step = 1, width = "175px", ticks = FALSE),
+                                  step = 1, width = "175px", 
+                                  ticks = FALSE),
                       sliderInput("phase", "phase angle (nπ) for y2",
                                   min = 0, max = 2, value = 0.5,
-                                  step = 0.25, width = "175px", ticks = FALSE),
+                                  step = 0.25, width = "175px", 
+                                  ticks = FALSE),
                       radioButtons("showy3", "display sum (y3)?", 
                                    choices = c("yes", "no"), 
                                    selected = "no", inline = TRUE)
                     ),
-                    plotOutput("twosinewaves", height = "600px"))
+                    plotOutput("twosinewaves", height = "550px"))
                 )),
           
               tabPanel("Superposition of Many Sine Waves",    
                 fluidRow(
                   column(width = 6,
                     wellPanel(
-                      includeHTML("text/complexwaves.html")
-          )     
-          ),
+                      class = "scrollable-well",
+                      div(
+                        class = "html-fragment",
+                      includeHTML("text/activity2.html")
+          ))),
                   column(width = 6,
                          align = "center",
                     splitLayout(
@@ -71,7 +79,7 @@ ui = navbarPage("AC 3.0: Superposition of Waves",
                                    choices = c("yes","no"), selected = "no",
                                    inline = TRUE)
           ),
-                    plotOutput("complexwaves", height = "550px"),
+                    plotOutput("complexwaves", height = "450px"),
                     uiOutput("waveequation")
           )
           )
@@ -79,10 +87,12 @@ ui = navbarPage("AC 3.0: Superposition of Waves",
           tabPanel("Wrapping Up",
             fluidRow(
               column(width = 6,
-                     wellPanel(id = "wrapuppanel",
-                               style = "overflow-y:scroll; max-height: 750px",
+                     wellPanel(
+                       class = "scrollable-well",
+                       div(
+                         class = "html-fragment",
                        includeHTML("text/wrapup.html")
-                     )),
+                     ))),
               column(width = 6,
                      align = "center",
                      splitLayout(
