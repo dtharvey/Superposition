@@ -2,15 +2,15 @@
 output: html_fragment
 ---
 
-The figure on the right demonstrates the superposition of two sine waves, $y_1$ and $y_2$, to form a new wave, $y_3$. The sine waves $y_1$ and $y_2$ are define by the equation $y(x) = A \sin(ax + n \pi)$, where $n \pi$ gives the phase angle in units of $\pi$. For $y_1$, the amplitude is fixed to 1, the periodicity is fixed to 1, and the phase angle is fixed to $n \pi = 0$; thus, $y_1 = \sin(x)$. The three sliders allow you to change the amplitude, periodicity, and phase angle for $y_2$. When the radio button is set to display the sum of $y_1$ and $y_2$, their sum appears as $y_3$.
+The figure on the right demonstrates the superposition of two sine waves, $y_1$ and $y_2$, to form a new wave, $y_3$. The sine waves $y_1$ and $y_2$ are defined by the equation $y(x) = A \sin(ax + n \pi)$, where $n \pi$ gives the phase angle in units of $\pi$. For $y_1$, the amplitude is fixed to 1, the periodicity is fixed to 1, and the phase angle is fixed to $n \pi = 0$; thus, $y_1 = \sin(x)$. The three sliders allow you to change the amplitude, periodicity, and phase angle for $y_2$. When the radio button is set to display the sum of $y_1$ and $y_2$, their sum appears as $y_3$.
 
-**Exercise 1.** Adjust the values of $A$, $a$, and $n \pi$ for $y_2$ and explain how each variable affects the shape of the sine wave $y_2$. For clarity, do not display $y_3$.
+**Exercise 1.** Adjust the values of $A$, $a$, and $n \pi$ for $y_2$ and explain how each affects the shape of the sine wave $y_2$. For clarity, do not display $y_3$.
 
 **Exercise 2.** Reset the values for $y_2$ to an amplitude of 2, a periodicity of 2, and a phase angle of $0.50 \pi$. Examine the shapes of $y_1$ and $y_2$ and predict the shape of $y_3$. Use the radio button to display $y_3$ and evaluate your work.
 
-**Exercise 3.** The figure below shows $y_3$, the superposition of $y_1 = \sin(x)$ with $y_2 = A\sin(ax + n\pi)$. Drawing on your understanding of how $A$, $a$, and $n \pi$ affect a sine wave's shape, predict the values of $A$, $a$, and $n\pi$ for $y_2$ that will reproduce $y_3$. Test your prediction and make adjustments to the sliders for $A$, $a$, and $n \pi$ as needed.
+**Exercise 3.** The figure below shows the superposition of $y_1 = \sin(x)$ with $y_2 = A\sin(ax + n\pi)$. Drawing on your understanding of how $A$, $a$, and $n \pi$ affect a sine wave's shape, predict the values of $A$, $a$, and $n\pi$ for $y_2$ that will reproduce $y_3$. Test your prediction and make adjustments to the sliders for $A$, $a$, and $n \pi$ as needed.
 
-```{r, echo=FALSE, fig.height=2.0}
+```{r, echo=FALSE, fig.align='center', fig.width = 6, fig.height=2.0}
 palette("Okabe-Ito")
 x = seq(0, 4*pi, 0.01*pi)
 y1 = sin(x)
