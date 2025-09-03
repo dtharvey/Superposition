@@ -8,34 +8,35 @@ ui = navbarPage("AC 3.0: Superposition of Waves",
                             href = "style.css")
           ),
           
-          # introduction tabPanel
-          tabPanel("Introduction",
-                   fluidRow(
-                     withMathJax(),
-                     column(width = 6,
-                            wellPanel(
-                              class = "scrollable-well",
-                              div(
-                                class = "html-fragment",
-                              includeHTML("text/introduction.html")
-                            ))),
-                     column(width = 6,
-                            plotOutput("introplot", height = "600px"))
+ # introduction tabPanel
+    tabPanel("Introduction",
+        fluidRow(
+          withMathJax(),
+              column(width = 6,
+                    wellPanel(
+                      class = "scrollable-well",
+                      div(
+                          class = "html-fragment",
+                          includeHTML("text/introduction.html")
+                  ))),
+                column(width = 6,
+                      plotOutput("introplot", height = "600px"))
                    )),
-          
-              tabPanel("Superposition of Two Sine Waves",
-                fluidRow(
-                  column(width = 6,
-                         wellPanel(
-                           class = "scrollable-well",
-                           div(
-                             class = "html-fragment",
-                           includeHTML("text/activity1.html")
-                         ))),
-                  column(width = 6,
-                         align = "center",
-                    splitLayout(
-                      sliderInput("A", "Amplitude (A) for y2",
+ 
+ # first activity
+    tabPanel("Superposition of Two Sine Waves",
+      fluidRow(
+        column(width = 6,
+              wellPanel(
+                  class = "scrollable-well",
+                  div(
+                      class = "html-fragment",
+                      includeHTML("text/activity1.html")
+                ))),
+          column(width = 6,
+                align = "center",
+                splitLayout(
+                  sliderInput("A", "Amplitude (A) for y2",
                                   min = -2, max = 2, value = 2,
                                   step = 0.25, width = "175px", 
                                   ticks = FALSE),
@@ -53,56 +54,54 @@ ui = navbarPage("AC 3.0: Superposition of Waves",
                     ),
                     plotOutput("twosinewaves", height = "550px"))
                 )),
-          
-              tabPanel("Superposition of Many Sine Waves",    
-                fluidRow(
-                  column(width = 6,
-                    wellPanel(
-                      class = "scrollable-well",
-                      div(
-                        class = "html-fragment",
+  
+ # second activity        
+    tabPanel("Superposition of Many Sine Waves",    
+      fluidRow(
+        column(width = 6,
+              wellPanel(
+                  class = "scrollable-well",
+                  div(
+                      class = "html-fragment",
                       includeHTML("text/activity2.html")
           ))),
-                  column(width = 6,
-                         align = "center",
-                    splitLayout(
-                      selectInput("wavetype", 
+          column(width = 6,
+                align = "center",
+                splitLayout(
+                  selectInput("wavetype", 
                                   label = "type of wave",
                                   choices = c("square wave", 
                                               "triangle wave",
                                               "sawtooth wave"),
                                   selectize = FALSE, width = "150px"),
-                      sliderInput("n1","number of sine waves",
-                                  min = 0, max = 15, value = 0,
-                                  step = 1, ticks = FALSE),
-                      radioButtons("waves","show individual sine waves?",
-                                   choices = c("yes","no"), selected = "no",
-                                   inline = TRUE)
+                  sliderInput("n1","number of sine waves",
+                              min = 0, max = 15, value = 0,
+                               step = 1, ticks = FALSE),
+                  radioButtons("waves","show individual sine waves?",
+                                choices = c("yes","no"), selected = "no",
+                                inline = TRUE)
           ),
                     plotOutput("complexwaves", height = "450px"),
                     uiOutput("waveequation")
-          )
-          )
-          ),
-          tabPanel("Wrapping Up",
-            fluidRow(
-              column(width = 6,
-                     wellPanel(
-                       class = "scrollable-well",
-                       div(
-                         class = "html-fragment",
-                       includeHTML("text/wrapup.html")
+          ))),
+ 
+ # wrapping up
+    tabPanel("Wrapping Up",
+      fluidRow(
+        column(width = 6,
+              wellPanel(
+              class = "scrollable-well",
+                div(
+                    class = "html-fragment",
+                    includeHTML("text/wrapup.html")
                      ))),
-              column(width = 6,
-                     align = "center",
-                     splitLayout(
-                       downloadButton("sq", "download square wave"),
-                       downloadButton("tr", "download triangular wave"),
-                       downloadButton("saw", "download sawtooth wave")
-                     ),
-                     plotOutput("wrapup", height = "550px"))
-            ))
-        
-          
-          
-          )# close ui
+        column(width = 6,
+              align = "center",
+              splitLayout(
+                downloadButton("sq", "download square wave"),
+                downloadButton("tr", "download triangular wave"),
+                downloadButton("saw", "download sawtooth wave")
+             ),
+                plotOutput("wrapup", height = "550px"))
+            
+        )))# close ui
